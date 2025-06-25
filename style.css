@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Header */
+h1 {
+  background-color: #081b31;
+  color: #ace5f7;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+/* Choices Section */
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #e65c0c;
+  transform: scale(1.05);
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.choice:hover img {
+  transform: scale(1.1);
+}
+
+/* Score Board */
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  margin-top: 4rem;
+  gap: 7rem;
+  flex-wrap: wrap;
+}
+
+#user-score,
+#comp-score {
+  font-size: 4rem;
+  color: #081b31;
+  font-weight: bold;
+}
+
+/* Message Container */
+.msg-container {
+  margin-top: 5rem;
+}
+
+#msg {
+  background-color: #081b31;
+  color: #a9e7ff;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#msg:hover {
+  background-color: #0a2345;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .choices {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .score-board {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #msg {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
